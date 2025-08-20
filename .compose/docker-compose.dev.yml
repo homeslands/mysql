@@ -15,6 +15,8 @@ services:
       timeout: 60s # Increase timeout to give MySQL more time
       retries: 5
     restart: unless-stopped
+    ports:
+      - "3306:3306"
 
 networks:
   default:

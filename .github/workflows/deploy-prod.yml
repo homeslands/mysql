@@ -22,6 +22,8 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
           SSH_PORT: ${{ secrets.SSH_PORT_PROD }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
